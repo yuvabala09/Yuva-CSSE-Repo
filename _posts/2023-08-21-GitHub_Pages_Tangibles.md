@@ -3,8 +3,19 @@ toc: true
 comments: true
 layout: post
 title: tangibles
+type: tangibles
 description: Struggles and Success
 courses: { compsci: {week: 1} }
+---
+
+---
+toc: true
+comments: false
+layout: post
+title: Calculator MD
+description: Grab of the Calculator from APCSA repo.
+type: tangibles
+courses: { compsci: {week: 2} }
 ---
 
 ### Summary of Accomplishments
