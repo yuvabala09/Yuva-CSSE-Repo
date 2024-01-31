@@ -67,7 +67,7 @@ courses: { compsci: {week: 7} }
     }
 
     #setting input:checked + label{
-        background-color: #FFF;
+        background-color: #FFFFFF;
         color: #000;
     }
 </style>
@@ -98,12 +98,16 @@ courses: { compsci: {week: 7} }
             <a id="new_game2" class="link-alert">new game</a>
             <br>
             <p>Speed:
+                <input id="speed0" type="radio" name="speed" value="150"/>
+                <label for="speed0">Super Slow</label>
                 <input id="speed1" type="radio" name="speed" value="120" checked/>
                 <label for="speed1">Slow</label>
                 <input id="speed2" type="radio" name="speed" value="75"/>
                 <label for="speed2">Normal</label>
                 <input id="speed3" type="radio" name="speed" value="35"/>
                 <label for="speed3">Fast</label>
+                <input id="speed4" type="radio" name="speed" value="10"/>
+                <label for="speed4">Super Fast</label>
             </p>
             <p>Wall:
                 <input id="wallon" type="radio" name="wall" value="1" checked/>
@@ -272,7 +276,7 @@ courses: { compsci: {week: 7} }
             }
             // Repaint canvas
             ctx.beginPath();
-            ctx.fillStyle = "royalblue";
+            ctx.fillStyle = "red";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Paint snake
             for(let i = 0; i < snake.length; i++){
@@ -332,7 +336,7 @@ courses: { compsci: {week: 7} }
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
         let activeDot = function(x, y){
-            ctx.fillStyle = "#FFFFFF";
+            ctx.fillStyle = "#1b18c9";
             ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
         }
         /* Random food placement */
@@ -367,8 +371,8 @@ courses: { compsci: {week: 7} }
         /////////////////////////////////////////////////////////////
         let setWall = function(wall_value){
             wall = wall_value;
-            if(wall === 0){screen_snake.style.borderColor = "#606060";}
-            if(wall === 1){screen_snake.style.borderColor = "#FFFFFF";}
+            if(wall === 0){screen_snake.style.borderColor = "#1b18c9";}
+            if(wall === 1){screen_snake.style.borderColor = "#1b18c9";}
         }
     })();
 </script>

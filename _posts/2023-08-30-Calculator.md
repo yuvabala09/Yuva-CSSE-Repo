@@ -5,9 +5,27 @@ layout: post
 title: Calculator MD
 description: Grab of the Calculator from APCSA repo.
 type: tangibles
-courses: { compsci: {week: 2} }
+courses: { compsci: {week: 7} }
 ---
+<!--
+Hack 0: Right justify result
+Hack 1: Test conditions on small, big, and decimal numbers, report on findings. Fix issues.
+Hack 2: Add the common math operation that is missing from calculator
+Hack 3: Implement 1 number operation (ie SQRT)
+-->
 
+
+<!--
+HTML implementation of the calculator.
+-->
+
+
+<!--
+   Style and Action are aligned with HRML class definitions
+   style.css contains majority of style definition (number, operation, clear, and equals)
+   - The div calculator-container sets 4 elements to a row
+   Background is credited to Vanta JS and is implemented at bottom of this page
+-->
 <style>
   .calculator-output {
     /* calulator output 
@@ -20,7 +38,7 @@ courses: { compsci: {week: 2} }
   
     padding: 0.25em;
     font-size: 20px;
-    border: 5px solid black;
+    border: 5px light blue;
   
     display: flex;
     align-items: center;
@@ -52,6 +70,9 @@ courses: { compsci: {week: 2} }
       <div class="calculator-number">0</div>
       <div class="calculator-number">.</div>
       <div class="calculator-equals">=</div>
+      <!--row 5-->
+      <div class="calculator-operation">^2</div>
+      <div class="calculator-operation">sqrt</div>
   </div>
 </div>
 
@@ -131,6 +152,12 @@ courses: { compsci: {week: 2} }
               break;
           case "/":
               result = first / second;
+              break;
+          case "^2":
+              result = first * first
+              break;
+          case "sqrt":
+              result = Math.sqrt (first)
               break;
           default: 
               break;
